@@ -1,8 +1,14 @@
-def s_square(x):
-    return(x*x)
-size = int(input("введите сторону квадрата: "))
-square  = s_square(size)
-print("площадь квадрата = ",square ) 
+import math
+def square(side):
+    pl = side*side
+    if pl % 1 == 0:
+     print("Площадь квадрата =", pl) 
+    else:
+     print("Площадь квадрата =", math.ceil(pl)) 
+
+
+side = float(input("Введите сторону квадрата: "))
+square(side)
 
 
 
