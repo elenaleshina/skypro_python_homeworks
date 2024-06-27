@@ -1,1 +1,1 @@
-print("kontrolnayagit")
+print("control")
