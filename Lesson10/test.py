@@ -1,3 +1,4 @@
+import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
 import psycopg2
@@ -12,5 +13,6 @@ class Test:
         db=create_engine(db_url)
         with db.connect() as connection:
             result = connection.execute(skript["select by id"])
-        print(result.fetchall())
-        assert result.fetchall()[0][0] == 14737
+        result2 = result.fetchall()
+        print(result2)
+        assert result2[0][0] == 14737
